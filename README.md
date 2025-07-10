@@ -63,8 +63,8 @@ MiniBankApp/
 **`POST /user/{userId}`**
 ```json
 {
-  "accountNumber": "SB001",
   "accountType": "Savings"
+  "balance":5000
 }
 ```
 ![Create Account](images/Create_Account_For_User.png)
@@ -73,14 +73,14 @@ MiniBankApp/
 
 ### 💰 3. Deposit Money
 
-**`POST /deposit?userId=1&amount=5000`**
+**`POST /transactions/deposit?userId=1&amount=5000`**
 ![Deposit](images/Deposit.png)
 
 ---
 
 ### 💸 4. Withdraw Money
 
-**`POST /withdraw?userId=1&amount=3000`**
+**`POST /transactions/withdraw?userId=1&amount=3000`**
 ![Withdraw](images/Withdraw.png)
 
 ---
@@ -102,7 +102,7 @@ MiniBankApp/
 ## ▶️ How to Run Locally
 
 1. **Clone the repo**
-```bash
+```
 git clone https://github.com/Skanda-10/MiniBankApp.git
 cd MiniBankApp
 ```
@@ -115,7 +115,7 @@ spring.datasource.password=yourpassword
 ```
 
 3. **Run the app**
-```bash
+```
 mvn spring-boot:run
 ```
 
